@@ -44,6 +44,14 @@
     {{--<script src="{{ asset('js/app.js') }}"></script>--}}
     @include('layouts.partials.js')
 @yield('scripts')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready( function () {
+            $('.datatables').datatables();
+        } );
+    </script>
     <script src="{{asset('assets/js/toastr.min.js')}}"></script>
     <script>
         @if(Session::has('success'))
